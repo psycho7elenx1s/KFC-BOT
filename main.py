@@ -215,7 +215,7 @@ async def process_service(message: types.Message, state: FSMContext):
         f"Услуга: {service}\nЦена: {price_info['price']} руб/{price_info['unit']}\n\n"
         "Введите дату стрима в формате ДД.ММ (например, 15.06):",
         reply_markup=get_back_kb())
-    )
+    
     await state.set_state(OrderStates.choosing_date)
 
 @dp.message(OrderStates.choosing_date, F.text.regexp(r'^\d{2}\.\d{2}$'))
