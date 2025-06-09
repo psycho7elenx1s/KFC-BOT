@@ -166,7 +166,7 @@ SERVICE_PRICES = {
 }
 
 # Хендлеры для заказа услуг
-@dp.message(F.text == "🛍️ Заказать услугу"))
+@dp.message(F.text == "🛍️ Заказать услугу")
 async def cmd_order(message: types.Message, state: FSMContext):
     kb = ReplyKeyboardBuilder()
     kb.add(KeyboardButton(text="🎮 Kick"))
