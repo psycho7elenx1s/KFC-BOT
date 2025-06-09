@@ -105,7 +105,7 @@ async def cmd_start(message: types.Message):
         reply_markup=get_main_kb(user_id)
     )
 
-@dp.message(F.text == "🔙 Назад"))
+@dp.message(F.text == "🔙 Назад")
 async def cmd_back(message: types.Message, state: FSMContext):
     await state.clear()
     await message.answer(
